@@ -34,7 +34,8 @@ export class Game {
         this.camera.lookAt(0, 0, 0);
 
         // Renderer
-        this.renderer = new THREE.WebGLRenderer({ powerPreference: "high-performance", antialias: false, stencil: false, depth: false });
+        console.log("Initializing WebGL Renderer...");
+        this.renderer = new THREE.WebGLRenderer({ powerPreference: "high-performance", antialias: false, stencil: false, depth: true });
         this.renderer.setSize(this.width, this.height);
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         this.container.appendChild(this.renderer.domElement);
